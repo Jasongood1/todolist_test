@@ -126,5 +126,5 @@ req.on('data', chunk=>{
     
 }
 
-const server = http.createServer(requestListener);//requestListener使用者造訪createServer網站就觸發
-server.listen(3005);
+const server = http.createServer(requestListener);
+server.listen(process.env.PORT || 3005);
