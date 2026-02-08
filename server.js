@@ -4,7 +4,7 @@ const http = require('http');
 const { v4:uuidv4} = require('uuid');
 
 const errorHandle = require('./errorHandle');
-
+const todos = [];
 
 const requestListener = (req,res)=>{
     const headers = {
@@ -127,4 +127,4 @@ req.on('data', chunk=>{
 }
 
 const server = http.createServer(requestListener);
-server.listen(process.env.PORT || 3005);
+server.listen(process.env.PORT ||3005);
